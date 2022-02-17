@@ -26,7 +26,7 @@
     "posttest": "npm run lint",
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
     "docker:build": "docker build -t pos .",
-    "docker:run": "docker run -p 3000:3000 -d pos",
+    "docker:run": "docker run -p 3100:3100 -d pos",
     "premigrate": "npm run build",
     "migrate": "node ./dist/migrate",
     "preopenapi-spec": "npm run build",
@@ -55,6 +55,7 @@
     "@loopback/rest": "^11.0.1",
     "@loopback/rest-explorer": "^4.0.1",
     "@loopback/service-proxy": "^4.0.1",
+    "loopback-connector-postgresql": "^5.5.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {

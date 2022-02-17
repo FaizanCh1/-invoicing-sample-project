@@ -3,9 +3,14 @@ import {juggler} from '@loopback/repository';
 
 const config = {
   name: 'posDb',
-  connector: 'memory',
-  localStorage: '',
-  file: ''
+  connector: 'postgresql',
+  url: 'postgres://postgres:physics@localhost/pos',
+  host: 'localhost',
+  port: '5432',
+  database: 'pos',
+  user: 'postgres',
+  password: 'physics',
+  schema: "pos"
 };
 
 // Observe application's life cycle to disconnect the datasource when
